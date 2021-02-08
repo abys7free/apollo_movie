@@ -15,7 +15,7 @@ const Poster = styled.div`
   background-image: url(${(props) => props.bg});
   height: 100%;
   width: 100%;
-  background-size: auto;
+  background-size: cover;
   background-position: center center;
 `;
 

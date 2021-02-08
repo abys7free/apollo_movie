@@ -60,12 +60,13 @@ const Description = styled.p`
 `;
 
 const Poster = styled.div`
-  width: 25%;
-  height: 70%;
+  width: 20%;
+  height: 90%;
   background-color: transparent;
   background-image: url(${(props) => props.bg});
-  background-size: auto;
+  background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
 `;
 
 const Suggestions = styled.div`
@@ -106,7 +107,7 @@ export default function Detail() {
           <Title>{loading ? "Loading..." : data.movie.title}</Title>
           <>
             <Subtitle>
-              {data?.movie?.language} · {data?.movie?.rating}{" "}
+              {data?.movie?.language} {data?.movie?.rating}{" "}
             </Subtitle>
             <Description>{data?.movie?.description_intro}</Description>
           </>
