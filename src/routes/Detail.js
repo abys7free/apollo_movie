@@ -21,22 +21,23 @@ const GET_MOVIE = gql`
 `;
 
 const Container = styled.div`
-  height: 100vh;
   background-image: linear-gradient(-45deg, #d754ab, #fd723a);
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   color: white;
 `;
 
 const Section = styled.div`
   width: 100%;
-  height: 100%;
+  height: 60%;
   display: flex;
+  overflow: hidden;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   color: white;
 `;
 
@@ -47,7 +48,7 @@ const Column = styled.div`
 
 const Title = styled.h1`
   font-size: 65px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 `;
 
 const Subtitle = styled.h4`
@@ -60,37 +61,32 @@ const Description = styled.p`
 `;
 
 const Poster = styled.div`
-  width: 20%;
-  height: 90%;
+  width: 25%;
+  align-self: stretch;
   background-color: transparent;
   background-image: url(${(props) => props.bg});
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
 `;
 
 const Suggestions = styled.div`
-  height: 300px;
+  height: 20%;
   width: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: white;
-  .suggestion-poster {
-    border-radius: 7px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    margin: 5px;
-  }
 `;
 
 const Movies = styled.div`
-  margin: 100px 0;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 25px;
   width: 60%;
   .container {
-    height: 200px;
+    height: 100%;
   }
 `;
 

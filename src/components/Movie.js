@@ -16,7 +16,7 @@ const Poster = styled.div`
   height: 100%;
   width: 100%;
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
 `;
 
 export default function Moive({ id, bg }) {
